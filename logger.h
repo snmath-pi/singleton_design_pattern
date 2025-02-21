@@ -8,6 +8,8 @@ class Logger
 	static Logger* loggerInstance;
 	static std::mutex mtx;
 	Logger();
+	Logger(const Logger&);
+	Logger operator=(const Logger&);
 public:
 	static Logger* getLogger();
 	void Log(std::string msg);
